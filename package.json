@@ -1,0 +1,61 @@
+{
+  "name": "bams-printerhost",
+  "version": "1.0.0",
+  "description": "Printer host for direct printing from Browser",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Yogi Gilang Ramadhan",
+  "license": "ISC",
+  "dependencies": {
+    "@thiagoelg/node-printer": "^0.5.5",
+    "bootstrap": "^4.6.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "-": "0.0.1",
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "@electron-forge/maker-deb": "^6.0.0-beta.57",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
+    "@electron-forge/maker-zip": "^6.0.0-beta.57",
+    "electron": "^10.4.7",
+    "electron-rebuild": "^2.3.5",
+    "install": "^0.13.0",
+    "npm": "^7.18.1",
+    "rebuild": "^0.1.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "printerhost"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Bams Printer Host</title>
+    <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="bg-light">
+    <div class="container my-2" id="app">
+      <form>
+        <div class="form-group">
+          <label>Port</label>
+          <input id="input-port" type="number" name="port" class="form-control form-control-sm" placeholder="Port">
+        </div>
+        <div class="form-group">
+          <label>Token</label>
+          <input id="input-token" type="number" name="token" class="form-control form-control-sm" placeholder="Token">
+        </div>
+        <div class="form-group">
+          <button id="save-config-btn" type="button" class="btn btn-dark btn-sm btn-block">
+            Save
+          </button>
+        </div>
+      </form>
+      <hr>
+      <div class="form-group">
+        <label>Default Printer</label>
+        <input id="default-printer" type="text" class="form-control form-control-sm" disabled>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button id="start-btn" type="button" class="btn btn-sm btn-dark btn-block">
+            Start
+          </button>
+        </div>
+        <div class="col">
+          <button id="stop-btn" type="button" class="btn btn-sm btn-dark btn-block">
+            Stop
+          </button>
+        </div>
+      </div>
+      <hr>
+      <button id="test-print-btn" type="button" class="btn btn-sm btn-dark btn-block">
+        Test Print
+      </button>
+      <hr>
+      <textarea id="logWrapper" class="form-control p-1" 
+      rows="10" disabled></textarea>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
