@@ -1,4 +1,8 @@
-const server = require('socket.io')();
+const server = require('socket.io')({
+  cors: {
+    origin: "*"
+  }
+});
 
 class Service {
   constructor(port, token) {

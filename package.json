@@ -1,5 +1,5 @@
 {
-  "name": "@yogigr/printer-server-adapter",
+  "name": "printer-server-adapter",
   "version": "1.0.0",
   "description": "Printer server adapter for direct printing from Browser",
   "main": "main.js",
@@ -13,7 +13,12 @@
     "url": "https://github.com/yogigr/printerhost.git"
   },
   "keywords": [
-    "printer", "server", "adapter", "escp", "electron", "socket-io"
+    "printer",
+    "server",
+    "adapter",
+    "escp",
+    "electron",
+    "socket-io"
   ],
   "author": "Yogi Gilang Ramadhan <yogigilang182@gmail.com>",
   "license": "ISC",
@@ -45,7 +50,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "bams_printerhost"
+            "name": "printer_server_adapter"
           }
         },
         {
