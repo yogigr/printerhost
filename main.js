@@ -1,7 +1,7 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, Tray, Menu, dialog } = require('electron');
+const { app, BrowserWindow, Tray, Menu, dialog, nativeImage } = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -52,7 +52,7 @@ function createWindow () {
 }
 
 function createTray() {
-    let appIcon = new Tray(path.join(__dirname, "icon.ico"));
+    let appIcon = new Tray(nativeImage.createFromPath(path.join(__dirname, "icon.ico")));
     const contextMenu = Menu.buildFromTemplate([
         {
             label: 'Show', click: function () {
