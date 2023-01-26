@@ -70,7 +70,7 @@ function createTray() {
     appIcon.on('double-click', function (event) {
         mainWindow.show();
     });
-    appIcon.setToolTip('Bams Printer Host');
+    appIcon.setToolTip('Printer Server Adapter');
     appIcon.setContextMenu(contextMenu);
     return appIcon;
 }

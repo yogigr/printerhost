@@ -14,6 +14,9 @@ let service = null
 
 let logs = [];
 
+//set title
+document.title = 'Printer Server Adapter';
+
 //element
 const inputPort = document.getElementById('input-port')
 const inputToken = document.getElementById('input-token');
